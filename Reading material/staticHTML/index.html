@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- These scripts will allow you to use React in your HTML file. 
+    Note that these are development versions - for production, you should use the minified versions instead -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static HTML Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="my-react-app"></div>
+    <script>
+        var e = React.createElement("hi",{}, "Hello, React in Static HTML!");
+        ReactDOM.render(e, document.getElementById("my-react-app"));
+    </script>
+</body>
+
+<!-- React Library (react.development.js):
+
+Core React library
+Handles component creation and management
+Provides APIs for:
+Creating elements (React.createElement())
+Managing component lifecycle
+Handling state and props
+Creating hooks
+Platform-agnostic (can be used for web, mobile, desktop)
+
+ReactDOM Library (react-dom.development.js):
+
+Specific to web browsers
+Handles DOM manipulation
+Provides methods to:
+Render React elements to DOM (ReactDOM.render())
+Update DOM elements
+Handle browser-specific features
+Acts as a bridge between React and web browser DOM -->

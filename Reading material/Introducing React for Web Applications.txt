@@ -1,0 +1,24 @@
+React is component driven development.
+React uses declarative extension to the javascript language called JSX.
+React uses clever architectural design known as virtual DOM.
+Uses Babel compiler to convert JSX to pure JavaScript.
+
+React build by facebook. used to build components based user interface.
+These component have their own life cycle and state.
+simple components comes together to make more complex components/UI.
+helps in building reusable, stateful and interactive components easily and easy to maintain.
+components should be well designed and should have single responsibility.
+
+REACT FEATURES:
+Encapsulated components manage their own states. Doesnt need to worry about internal state of other components.
+extreme performance.
+Generally DOM updates and rerendering are what makes slow. React Doesnt directly interact with DOM of the browser.
+Instead React under the hood has virtual representation of DOM. Which is then reconciled with the actual DOM.
+These reconciliation process ensures that only those DOM nodes that have actually changed are re-rendered or updated in actual DOM.
+The process where the virtual DOM is compared with actual DOM to see whether any changes have to be applied to actual DOM is called reconciliation process.
+This virtual DOM is a in memory copy of the DOM that your browser displays.
+server side rendering is supported using node and simply display the static page in the site. Virtual DOM helps in enable this.
+communication within react application follows very strict direction of flow of data. 
+communication using one way data flow. Data flows from top level compoenet to low level component.
+React will re-render or change the component based on the state of the data
+code is predictable, robust, and easy to debug.
