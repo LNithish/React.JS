@@ -22,3 +22,16 @@ communication within react application follows very strict direction of flow of 
 communication using one way data flow. Data flows from top level compoenet to low level component.
 React will re-render or change the component based on the state of the data
 code is predictable, robust, and easy to debug.
+
+JSX:
+React.CreateElement and ReactDOM.Render is tedious to use.
+That is why you'll use an HTML like syntax to define your HTML content, it is called JSX.
+JSX stands for Javascript syntax extension. 
+With JSX you can define user define tags/HTML lile elements. It is user defined compoenets.
+JSX allows you to write HTML code inside the JavaScript.
+
+BABEL COMPILER:
+It converts JSX into pure Javascript which browser can understand.
+during development it converts on the fly.
+during production need to precompile for avoiding performance impact.
+A function can return both javascript data types and also a React.JSX.elements
