@@ -35,3 +35,25 @@ It converts JSX into pure Javascript which browser can understand.
 during development it converts on the fly.
 during production need to precompile for avoiding performance impact.
 A function can return both javascript data types and also a React.JSX.elements
+
+PROPS and STATE:
+There are two ways to pass data to React component.(props and state)
+Props refers to the data that you pass in from the rest of the application toa component so that the component can use that data to display itself.
+State is data that is internal to a component.
+PROPS are initialization data passed from parent compoenet to child compoenet.
+props are considered to be read-only.The data that is present within props should not be changed by the component.
+To pass default props we can use defaultProps attribute like classname.defaultProps={Props details}.
+propTypes is an attribute in class component to define the type of prop.
+There is a specific prop called children passed automatically within this.prop.children, No need to pass any value for this prop.
+children prop allows the component to access the child elements of that compoenet.
+
+Every React component is actually a state machine and has internal state held within itself.
+This is private data that is internal to the component.Components which hold state are called stateful components.
+Data that is private or internal to a component is stored in the state of a component.
+This is not data that is passed in from outside,this is data that belongs to a component
+state should never be modified directly,otherwise component re-rendering will not occur and your components
+State is stored in a special property called state which is accessible within the constructor using this.state.
+Each time you update the state component will re render automatically by the react library.
+
+Higher level components should calculate and manage state.And they should pass down data to lower level components using props.
+Components have to be re-rendered if their props change or their state change.
