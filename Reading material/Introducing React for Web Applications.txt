@@ -109,3 +109,17 @@ Anywhere in the component tree,if an error occurs, you don't have to worry about
 The standard way to use an error boundary is to have just one component be the error boundary.
 So you write code once for errors on your page, and you handle all of the errors there.
 The same error boundary component is thus reusable for all components in your component tree.
+
+FORMS:
+
+in React, forms are still special because formstypically hold some internal state of their own.
+component have the ability to manage their own state.And the state of components need to be synced up with the internal data held by forms, displayed within components.
+And this is exactly why forms in React are often set up as controlled components.
+
+CONTROLLED COMPONENTS:
+When you sync up the state object with the internal data held in form elements and use React to control the state of the form, that is a controlled component.
+You're controlling form elements using the React components' state,that is a controlled component.
+
+REF:
+We can use ref to access DOM nodes or react elements that have been created within the render method of component.
+This is needed when working with uncontrolled component.
