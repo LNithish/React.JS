@@ -57,3 +57,55 @@ Each time you update the state component will re render automatically by the rea
 
 Higher level components should calculate and manage state.And they should pass down data to lower level components using props.
 Components have to be re-rendered if their props change or their state change.
+
+EVENTS:
+user interactions like click or typing is communicated to our app using Events.
+Events in your browser are communicated between the nodes in yourDOM hierarchy in two phases, the capture phase and the bubble phase.
+events can be fired by any element in your DOM hierarchy, any node.
+There are two ways in which events can travel.The two ways are called event capturing and event bubbling.
+When an event is propagated downwards down your html tree structure,that's referred to as event capturing.
+This click is propagated upwards, andparent elements of the element p get a chance to react to that event.This is referred to as event bubbling.When a event bubbles upwards to the parent elements.
+Browsers use both event capturing as well as event.
+React by default handles events in the bubblephase when the event travels upwards to parent elements
+If you want events to be handled in the capture phase,you'll use the capture suffix on your event handlers.Instead of onClick, you'll specify onClickCapture.Instead of onMouseOver, you will specify onMouseOverCapture.
+event example: mouse event, touch event, click event, keyboard event, selection event, image event, etc ...
+
+We have different types of events with different event objects, and you have different browsers that have different event interfaces.
+All of these are brought together behind a single synthetic event.
+A synthetic event is an object created within React.React wraps the different event typesin the native browser into a single synthetic event object.
+So all you're doing when working in React is working with a single interface,that of the synthetic event you're not worried about the differencesbetween the different types of events.
+Synthetic events also help eliminate cross browser differences.So if different browsers have different objects to represent different typesof events, well, you don't have to care about them at all.
+You don't have to worry about whether a certain property exists on Chrome whether it exists on Firefox and so on.
+Also, common functions available on event objects, such as stopPropogation()and preventDefault(), are available on the synthetic event as well.
+stopPropogation() is what you'd invoke when you want to stop the propagationof this event beyond the current event handler.And preventDefault() is what you'll invokewhen you want to prevent the browser's default handling of the event.
+There is another advantage to having synthetic event trappers in a React andthat is event pooling.Event pooling is when you reuse the synthetic event wrapper formultiple events to improve the performance of your application. handled by React automatically.
+
+Components have a life cycle divided into phases.
+
+MOUNTING:
+We first have the mounting phase,when the component is first rendered into the DOM.This is the phase where the component is initialized and rendered forthe first time.
+The first function within your React component that is called in the mounting phase is the constructor of your component.
+This is where you initialize the state of your component.Once the constructor has been called, the render function is invokedto render the component into your DOM to display the component to screen.
+Once the render function finishes executing, React is in charge of updatingthe DOM, or the Document Object Model of your browser, andany references to your components.
+Do not update state inside render function it will cause the component to be re-render again and again.
+And the special method that is invoked at the end of this mounting phase, is componentDidMount.
+
+UPDATING:
+We then have the updating phase of the component,which the component gets into when its state changes.Changes in state of the component causes the component to update itself,that is the updating phase.
+A component moves into the updating phase under certain conditions.It receives new props from its parent element.setState() has been invoked andthe internal state associated with the component has changed.Or you've caused the component to forceUpdate().
+And in the update phase, the render function is invoked once again.The component is re-rendered.Once the re-rendering is complete and the component has been updated,the special method that is then invoked is componentDidUpdate.
+
+UNMOUNTING:
+And finally, when a component is removed from the DOM,that is the unmounting phase of the component.These are the three phases in the component's life cycle.
+the last phase in the components life cycle is the unmounting phase.This is when a component is about to be removed from the DOM,it's no longer needed.That's when, just before the component is removed from the DOM,componentWillUnmount is called.
+
+DOM reconciliation:
+changes made first applied in virtual DOM and then applied in actual DOM after reconciliation process.
+
+ERROR BOUNDARY:
+The componentDidCatch can be thought of as a part of the lifecycle methods of a component.
+It's an error boundary that is invoked when any component in the component tree nested under the StreamingNumbers component throws an error.This is the error boundary.
+Anywhere in the component tree,if an error occurs, you don't have to worry about where it will be handled.The error will be propagated up the component tree to the closest error boundary.
+The standard way to use an error boundary is to have just one component be the error boundary.
+So you write code once for errors on your page, and you handle all of the errors there.
+The same error boundary component is thus reusable for all components in your component tree.
