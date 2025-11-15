@@ -123,3 +123,7 @@ You're controlling form elements using the React components' state,that is a con
 REF:
 We can use ref to access DOM nodes or react elements that have been created within the render method of component.
 This is needed when working with uncontrolled component.
+
+THIS.PROPS.CHILDREN:
+In React, this.props.children is a special prop that allows components to accept and render content passed between their opening and closing tags. 
+It enables the creation of highly reusable and flexible components, often referred to as "wrapper" or "layout" components
