@@ -127,3 +127,8 @@ This is needed when working with uncontrolled component.
 THIS.PROPS.CHILDREN:
 In React, this.props.children is a special prop that allows components to accept and render content passed between their opening and closing tags. 
 It enables the creation of highly reusable and flexible components, often referred to as "wrapper" or "layout" components
+
+CONTEXT:
+React Context provides a mechanism to share data across the component tree without manually passing props at every level. 
+It addresses the problem of "prop drilling," where props are passed through intermediate components that don't directly use them, simply to forward them to a deeply nested descendant component. 
+
